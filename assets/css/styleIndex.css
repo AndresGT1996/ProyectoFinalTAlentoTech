@@ -21,6 +21,8 @@
     background-color: rgb(36, 36, 36);
 }
 
+
+
 @media (max-width: 485px) {
     .contacto i {
         display: none;
