@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechStore</title>
+    <title>MyCosta</title>
     <!-- css bootstrap icon -->
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <!-- css bootstrap -->
@@ -18,7 +18,7 @@
     <header>
         <section class="bg-color-personalisado-black text-color-personalisado-white  rounded-1 py-3" >
                 <div class="container ">
-                    <div class=" w-100 d-flex justify-content-between">
+                    <div class=" w-100 d-flex justify-content-between header_information">
                         <div class="d-flex justify-content-between">
                             <div class="contacto">
                                 <i class="bi bi-telephone-forward fs-6"></i>
@@ -31,7 +31,7 @@
                       
                             </div>
                       
-                    <div class="text-end">
+                    <div class="inconos-redes">
                         <a href="#"><i class="bi bi-instagram pe-2 text-color-personalisado-white"></i></a>
                         <a href="#"><i class="bi bi-facebook pe-2 text-color-personalisado-white"></i></a>
                         <a href="#"><i class="bi bi-whatsapp  text-color-personalisado-white"></i></a>
@@ -45,38 +45,42 @@
           
             <section class="nav-bar">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                    <div class="container-fluid">
-                      <a class="navbar-brand hover-a-nav home" href="./index.html">Home</a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                              Productos
-                            </a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item hover-a-nav" href="#computadores">Computadores</a></li>
-                              <li><a class="dropdown-item hover-a-nav" href="#consolas">Consolas</a></li>
-                              <li><a class="dropdown-item hover-a-nav" href="#televisores">Televisores</a></li>
+                    <div class="w-100 d-flex aling-items-center justify-content-between ps-4">
+                            <div class="w-50 d-flex aling-items-center">
+                                <a class="navbar-brand hover-a-nav home ps-2" href="./index.html " style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 1.8rem; color: #FFC300 ;">My<span style="color: #36515C; font-weight: 900";  >Costa</span></a>
+                            </div>
+                            
+                   
+                        <div class="container-fluid w-50 text-end">
+                          
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-color-personalisado-black fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                  Productos
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item hover-a-nav" href="#">Sombreros</a></li>
+                                  <li><a class="dropdown-item hover-a-nav" href="#">Hamacas</a></li>
+                                  <li><a class="dropdown-item hover-a-nav" href="#">Mochilas</a></li>
+                                </ul>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link active hover-a-nav text-color-personalisado-black" aria-current="page" href="#">Sobre Nosotros</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link hover-a-nav text-color-personalisado-black " href="#">Contactanos</a>
+                              </li>
                             </ul>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link active hover-a-nav" aria-current="page" href="#">Servicio Tecnico</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link hover-a-nav" href="#">Contactanos</a>
-                          </li>
-                      
-    
-                        </ul>
-                        <form class="d-flex" role="search">
-                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                      </div>
+                          </div>
+                        </div>
+                   
                     </div>
+                      
+                
                   </nav>
             </section>  
           
@@ -281,12 +285,16 @@
 
                         </li>
                         <li>
-                            <i class="bi bi-envelope-at pe-2"></i>
-                            <span>techstore@gmail.com</span>
+                            
+                            <a href="">Sombreros</a>
                         </li>
                         <li>
-                            <i class="bi bi-telephone-forward pe-2 "></i>
-                            <span>3007549685</span>
+                            
+                            <a href="">Hamacas</a>
+                        </li>
+                        <li>
+                            
+                            <a href="">Mochilas</a>
                         </li>
                     </ul>
                 </div>

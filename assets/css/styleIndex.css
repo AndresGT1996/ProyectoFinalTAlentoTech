@@ -3,22 +3,27 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+ 
+}
+
+a{ 
+    text-decoration: none;
 }
 
 .text-color-personalisado-white{
   
-    color: rgb(240, 240, 240);
+    color: #f8eedd;
 }
 
 .text-color-personalisado-black{
 
-    color: rgb(14, 14, 14);
+    color: #36515c;
 }
 
 
 .bg-color-personalisado-black{
-
-    background-color: rgb(36, 36, 36);
+    background-color: #36515c;
+  
 }
 
 
@@ -30,5 +35,12 @@
     .contacto span {
         display: none;
     }
-    
+
+    .inconos-redes { 
+        width: 100%;
+        text-align: center;
+    }
+    .inconos-redes i { 
+        font-size: 20px;
+    }
 }
