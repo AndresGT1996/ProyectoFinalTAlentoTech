@@ -54,8 +54,10 @@ a{
 
 @media (min-width: 600px) {
     .img_carrusel{
-        width: 50%;
+
         height: 500px;
-        display: flex;
+        padding: 0 30px;
+
     }
+
 }
