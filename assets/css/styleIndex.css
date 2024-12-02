@@ -26,6 +26,11 @@ a{
   
 }
 
+.carrusel-img img {
+    height: 50%;
+
+ }
+
 
 
 @media (max-width: 485px) {
