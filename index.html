@@ -3,88 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechStore</title>
+    <title>MyCosta</title>
     <!-- css bootstrap icon -->
-    <link rel="stylesheet" href="./assets/node_modules/bootstrap-icons/font/bootstrap-icons.css">  
+    <link rel="stylesheet" href="./assets/node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <!-- css bootstrap -->
      <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+     <link rel="stylesheet" href="./assets/css/custom.css">
+     <link rel="stylesheet" href="./assets/css/templatemo.css">
     <!-- css personal -->
     <link rel="stylesheet" href="./assets/css/styleIndex.css">
     
 </head>
 <body>
     <header>
-        <section class="container info">
-           
-                <div class="contacto">
-                        <div >
-                            <i class="bi bi-telephone-forward"></i>
-                            <span>3007549685</span>
-                        </div>
-                            <div>
-                                <i class="bi bi-envelope-at"></i>
-                                <span>techstore@gmail.com</span>
+        <!-- seccion de informacion de contacto y redes sociales  -->
+        <section class="bg-color-personalisado-black text-color-personalisado-white  rounded-1 py-3" >
+                <div class="container ">
+                    <div class=" w-100 d-flex justify-content-between header_information">
+                        <div class="d-flex justify-content-between">
+                            <div class="contacto">
+                                <i class="bi bi-telephone-forward fs-6"></i>
+                                <span class="pe-4 fs-6 ">3007549685</span>
                             </div>
-                                <div>
-                                    <i class="bi bi-stopwatch "></i>
-                                    <span class="horario">lun - Sab: 8:00am - 7:00pm</span>
+                                <div class="contacto"> 
+                                    <i class="bi bi-envelope-at fs-6"></i>
+                                    <span class="fs-6">techstore@gmail.com</span>
                                 </div>
+                      
+                            </div>
+                      
+                    <div class="inconos-redes">
+                        <a href="#"><i class="bi bi-instagram pe-2 text-color-personalisado-white"></i></a>
+                        <a href="#"><i class="bi bi-facebook pe-2 text-color-personalisado-white"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp  text-color-personalisado-white"></i></a>
                     </div>
-            
-            <div class="redes">
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-whatsapp"></i></a>
-            </div>
-        </section>
-
-        <section class="nav-bar">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                  <a class="navbar-brand hover-a-nav home" href="./index.html">Home</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                          Productos
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item hover-a-nav" href="#computadores">Computadores</a></li>
-                          <li><a class="dropdown-item hover-a-nav" href="#consolas">Consolas</a></li>
-                          <li><a class="dropdown-item hover-a-nav" href="#televisores">Televisores</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active hover-a-nav" aria-current="page" href="#">Servicio Tecnico</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link hover-a-nav" href="#">Contactanos</a>
-                      </li>
-                  
-
-                    </ul>
-                    <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                  </div>
+                    </div>
+              
+                          
+    
                 </div>
-              </nav>
-        </section>      
+            </section>
+        <!-- Fin seccion de informacion de contacto y redes sociales  -->
+
+        <!-- Seccion de navegacion y logo -->
+            <section class="nav-bar">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="w-100 d-flex aling-items-center justify-content-between ps-5">
+                            <div class="w-50 d-flex aling-items-center">
+                                <a class="navbar-brand hover-a-nav home ps-2" href="./index.html " style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 1.8rem; color: #FFC300 ;">My<span style="color: #36515C; font-weight: 900";  >Costa</span></a>
+                            </div>
+                            
+                   
+                        <div class="container-fluid w-50 text-end">
+                          
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse ps-5 " id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-color-personalisado-black fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                  Productos
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item hover-a-nav" href="#">Sombreros</a></li>
+                                  <li><a class="dropdown-item hover-a-nav" href="#">Hamacas</a></li>
+                                  <li><a class="dropdown-item hover-a-nav" href="#">Mochilas</a></li>
+                                </ul>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link active hover-a-nav text-color-personalisado-black" aria-current="page" href="#">Sobre Nosotros</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link hover-a-nav text-color-personalisado-black " href="#">Contactanos</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                   
+                    </div>
+                      
+                
+                  </nav>
+            </section>  
+        <!--  Fin de Seccion de navegacion y logo -->
+
     </header>
 
     <main>
-        <section>
-            <img class="img-main" src="./assets/img/imagenFondo.jpg" alt="computer">
-        </section>
-       
+        <!-- Carrrusel de compras -->
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/img/category_img_01.jpg" class="d-block w-100 img_carrusel" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/category_img_02.jpg" class="d-block w-100 img_carrusel" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/category_img_03.jpg" class="d-block w-100 img_carrusel" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+       <!-- Fin carrusel de compras -->
 
      
         <section class="container computadores" id="computadores" >
-            <h2 class="configuracion-img-p">Computadores para toda la familia</h2>
+            <h2 class="configuracion-img-p text-center pt-4 pb-5 text-color-personalisado-black">Computadores para toda la familia</h2>
             <div class="row">
                 <div class="col-12 col-md-4 col-lg-4 configuracion-img-p">
                     <img src="./assets/img/Img-1-pc.jpg" alt="pc">
@@ -240,8 +278,72 @@
 
 
     </main>
+    <footer class="bg-color-personalisado-black py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-5 col-lg-5 text-color-personalisado-white" >
+                    <h2 class="fs-4 border-bottom">TechStore</h2>
+                    <ul class="list-unstyled">
+                       
+                        <li class="text-decoration-none">
+                            <i class="bi bi-geo-alt"></i>
+                            <span>Local principa - Barranquilla - Colombia</span>
 
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-at pe-2"></i>
+                            <span>techstore@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone-forward pe-2 "></i>
+                            <span>3007549685</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-1 col-md-3 col-lg-3">
 
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+                </div>
+                <div class="col-12 col-md-4 col-lg-4 text-color-personalisado-white " >
+                    <h2 class="fs-4 border-bottom">Información</h2>
+                    <ul class="list-unstyled">
+                       
+                        <li class="text-decoration-none">
+                            <a href="./index.html">home</a>
+
+                        </li>
+                        <li>
+                            
+                            <a href="">Sombreros</a>
+                        </li>
+                        <li>
+                            
+                            <a href="">Hamacas</a>
+                        </li>
+                        <li>
+                            
+                            <a href="">Mochilas</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+              
+            </div>
+    
+
+        <div class="container border-top pt-1 fst-italic">
+            <div class="row">
+                <div class="col-12 col-md-8 col-lg-8 text-color-personalisado-white" >
+                    <p>Copyright &prop; 2024 - ProaArt | Diseñado por: Andrés González</p>
+                  
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+ 
+
 </body>
 </html>
