@@ -87,7 +87,7 @@
                     <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="./compras.html">
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="bi-cart-plus-fill  text-dark mr-1"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
                     </a>
@@ -99,64 +99,135 @@
                
              
               </nav>
-        </section>  
+        </section>   
         <!--  Fin de Seccion de navegacion y logo -->
 
     </header>
 
-    <main class="ps-1 pt-4 pb-4">
-        <section>
-            <div class="container d-flex">
-                <div class="col-12 col-md-8 col-lg-8">
-                    <div>
-                        <h2 class="fw-bold">
-                            Quienes somos
-                        </h2>
-                        <p class="text-justify w-80">
-                            En MyCosta, somos un equipo apasionado por la artesanía y la cultura local. Nos dedicamos a conectar a artesanos talentosos con consumidores que valoran la calidad y la autenticidad. Nuestra plataforma ofrece una cuidada elección de productos artesanales, cada uno con una historia única y hecho a mano con dedicación y amor.
-                        </p>
-                    </div>
-                    <div>
-                        <h2 class="fw-bold">Misión</h2>
-                        <p class="text-justify">Nuestra misión es promover el trabajo de artesanos locales y brindar a los consumidores acceso a productos auténticos y sostenibles. Creemos en el poder de la artesanía como una forma de preservar tradiciones y culturas, al tiempo que fomentamos un comercio justo y responsable.</p>
-                    </div>
-        
-                    <div>
-                        <h2 class="fw-bold">Visión</h2>
-                        <p class="text-justify">
-                            Aspiramos a ser la plataforma líder en el e-commerce de productos artesanales, reconocida por su compromiso con la sostenibilidad, la autenticidad y la promoción de comunidades creativas. Queremos ser el puente entre los creadores y los consumidores, creando un impacto positivo en las vidas de ambos.</p>
-                    </div>
-        
-                    <div>
-                        <h2 class="fw-bold">Objetivos</h2>
-                        <ol>
-                            <li class="text-justify">Apoyar a artesanos locales: Facilitar la comercialización de sus productos, brindando visibilidad y acceso a mercados más amplios.</li>
-                            <li class="text-justify"> Fomentar la sostenibilidad: Promover prácticas responsables en la producción y el consumo de productos artesanales.</li>
-                            <li class="text-justify">Ofrecer una experiencia de compra única: Crear una plataforma fácil de usar que resalte la singularidad de cada producto y la historia detrás de él.</li>
-                            <li class="text-justify">
-                                Educación y concienciación: Informar a los consumidores sobre la importancia de elegir productos artesanales y el impacto positivo que tienen en las comunidades.</li>
-                            <li class="text-justify">
-                                Crecimiento continuo: Expandir nuestra oferta de productos y mejorar constantemente la experiencia del cliente a través de la innovación y la retroalimentación.</li>
-                        </ol>
-                           
-                    </div>
-                </div>
+    <main>
+        <!-- productos del carrito -->
+        <script>
+            document.addEventListener('DOMcontentLoaded', ()=>{
+                const baseDeDatos=[
+                {
+                    id:1,
+                    nombre: 'sombrero vueltiao, hecho a mano, 23 vueltas',
+                    precio: 250000,
+                    imagen: './assets/img/Sombreros/348619afe05073c815152f336eeea399.jpg'
 
-                <div class="col-0 col-md-4 col-lg-4 d-flex align-items-center">
-                    <img src="./assets/img/MyCosta_logo.png" class="w-100" alt="MyCosta">
-                </div>
+                },
+
+                {
+                    id:2,
+                    nombre: 'sombrero roj, hecho a mano, 23 vueltas',
+                    precio: 280000,
+                    imagen: './assets/img/Sombreros/OIP (1).jpg'
+
+                }
+
+                ];
+
+                let carrito = [];
+                const divisa = '$';
+                const DOMitems = document.querySelector('#items');
+                const DOMcarrito = document.querySelector('#carrito');
+                const DOMtotal= document.querySelector('#total');
+                const DOMbotonVaciar= document.querySelector('#boton-vaciar')
+
+
+            // dibujamos todos los productos a patir de la base de datos
+                function renderizarProductos(){
+                    baseDeDatos.array.forEach((info) => {
+                        // estructura
+                        const miNodo = document.createElement('div');
+                        miNodo.classList.add('card', 'col-sm-4');
+                        // body
+                        const miNodoCardBody = document.createElement('div');
+                        miNodoCardBody.classList.add('card-body');
+                        // titulo
+                        const miNodoTitle = document.createElement('h6');
+                        miNodoTitle.classList.add('card-title');
+                        miNodoTitle.textContent = info.nombre;
+                        // imagen
+                        const miNodoImage = document.createElement('img');
+                        miNodoImage.classList.add('img-fluid');
+                        miNodoImage.setAttribute('src', info.imagen);
+                        // precio
+                        const miNodoPrecio = document.createElement('p');
+                        miNodoPrecio.classList.add('card-text');
+                        miNodoPrecio.textContent =`${divisa}${info.precio}`;
+
+                        // insertamos
+                        miNodoCardBody.appendChild(miNodoImage);
+                        miNodoCardBody.appendChild(miNodoTitle);
+                        miNodoCardBody.appendChild(miNodoPrecio);
+                        miNodoCardBody.appendChild(miNodoCardBody);
+                        DOMitems.appendChild(miNodo);
+                    });
+                }
+
+                // dibujar todos los productos guardados en el carrito
+
+                function renderizarCarrito(){
+                    // Vaciamos todo el hmlt
+                    DOMcarrito.textContent= '';
+                    // quitar duplicados
+                    const carritoDuplicados = [...new set(carrito)];
+                    // generamos los nodos a partir del carrito
+                    carritoDuplicados.forEach((item)=>{
+                        // obtenemos el intem que necesitamos de la variable de la base de datos
+                        const miItem = baseDeDatos.filter((itemBaseDatos) => {
+                            return intemBaseDatos.id === parseInt(item);
+                        });
+                        // cuenta el numero de veces que se repite el producto
+                        const numeroUnidadesItem = carrito.reduce((total, itemID) =>{
+                    return itemID === item ? total+=1 : total;
+                },0);
+                // creamos el nodo del item del carrito
+                const niBoton = document.createElement('button');
+                miBoton.classList.add('btn', 'btn-danger', 'mx-5');
+                miBoton.textContent= 'X';
+                miBoton.style.marginLeft = '1rem';
+                miBoton.dataset.item = item;
+                miBoton.addEventListener('click', borraritemCarrito);
+
+                // mezclamos nodos
+                miNodo.appendChild(miBoton);
+                DOMcarrito.appendChild(miNodo);
+
+                    });
+                }
+
+                renderizarProductos();
+                renderizarCarrito();
+                
+            });
+            // fin dibujamos todos los productos a patir de la base de datos
+        </script>
+        <!-- Fin productos del carrito -->
+
+
+
+
+            <!-- Carrito de compras -->
+        <div class="container">
+            <div class="row">
+                <!-- elementos generados a paritir de la bd del carrito -->
+                <div id="items" class="col-sm-8 row"></div>
+                <aside class="col-sm-4">
+                    <h3>Carrito</h3>
+                    <ul id="carrito" class="list-group">
+                        <hr>
+                        <p class="text-right">Total: $ <span id="total"></span></p>
+                        <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                        <button id="" class="btn btn-info">Pagar</button>
+                    </ul>
+                </aside>
+
             </div>
-          
-          
 
-        </section>
-        
-
-
-
-
-
-
+        </div>
+      
 
 
 
@@ -230,9 +301,10 @@
     </footer>
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/custom.js"></script>
+    <!-- <script src="./assets/js/custom.js"></script> -->
     <script src="./assets/js/jquery-1.11.0.min.js"></script>
     <script src="./assets/js/templatemo.js"></script>
+    <script src="./assets/js/jquery-migrate-1.2.1.min.js"></script>
 
  
 

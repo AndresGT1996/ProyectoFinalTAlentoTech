@@ -82,10 +82,17 @@
                         </div>
                         
                     <!-- Carrito de compras -->
-                        <div class="d-flex align-items-center px-4 carrito-compras">
-                            <i class="bi bi-cart-dash  "></i>
-                        </div>
-
+                    <div class="navbar pe-4 d-flex">
+                      
+                        <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                            <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                        </a>
+                        <a class="nav-icon position-relative text-decoration-none" href="./compras.html">
+                            <i class="bi-cart-plus-fill  text-dark mr-1"></i>
+                            <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
+                        </a>
+                    </div>
+                    
                            <!-- fin carrito de compras -->
                     </div>
                  
@@ -298,7 +305,20 @@
 
               
             </div>
-    
+            
+            <div class="container border-top py-2">
+                <div class="row">
+                    <div class="col-8 col-md-4 col-lg-4 text-color-personalisado-white pb-2" >
+                            <label class="sr-only" for="subscribeEmail">Escriba su Email: </label>
+                    </div>
+                    <div class="col-4 col-md-4 col-lg-4 input-group mb-2">
+                                <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
+                                <div class="input-group-text btn-success text-light">Subscribirse</div>
+                      
+                    </div>
+                      
+                </div>
+            </div>
 
         <div class="container border-top pt-1 fst-italic">
             <div class="row">
